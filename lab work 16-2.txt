@@ -1,0 +1,60 @@
+import numpy as np
+#1D array
+a=np.array([1,2,3])
+print("a",a)  #type array
+print("type(a)",type(a))  #print the type of array
+print("\n")
+
+#2D array
+b=np.array([
+    [1,2,3],
+    [4,5,6]
+])
+print("b",b)  #type array
+print("type(b)",type(b))  #print the type of array
+print("\n")
+
+#3D array
+c=np.array([
+    [[1,2,3],[4,5,6]],
+    [[7,8,9],[10,11,12]]
+])
+print("c", c) #type array
+print("type(c)",type(c))  #print the type of array
+print("\n")
+
+#ndim
+print("a.ndin : ", a.ndim)
+print("b.ndin : ", b.ndim)  #give the dimantion of array
+print("c.ndin : ", c.ndim)
+print("\n")
+
+#shape
+print("a.shape : ", a.shape)
+print("b.shape : ", b.shape)  #give value in tuple{like(1,2,3)  where 1 is showing that how many 2D array,where 2 is showing that how many 1D array,where 3 is showing that how many elements array }
+print("c.shape : ", c.shape)
+print("\n")
+
+#size
+print("a.size : ", a.size)
+print("b.size : ", b.size)  #showing count of elements
+print("c.size : ", c.size)
+print("\n")
+
+#dtype
+print("a.dtype : ", a.dtype)
+print("b.dtype : ", b.dtype)   #type the length of array
+print("c.dtype : ", c.dtype)
+print("\n")
+
+#itemsize
+print("a.itemsize : ", a.itemsize)
+print("b.itemsize : ", b.itemsize)   #type the length of element
+print("c.itemsize : ", c.itemsize)
+print("\n")
+
+#nbytes
+print("a.nbytes : ", a.nbytes)
+print("b.nbytes : ", b.nbytes)   #size*elements
+print("c.nbytes : ", c.nbytes)
+print("\n")
