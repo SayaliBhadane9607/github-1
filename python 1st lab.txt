@@ -1,0 +1,72 @@
+print("Try programiz.pro")
+class Student:
+    def data(self):
+        self.name=input("Enter your name :")
+        self.age=int(input("Enter your Age :"))
+    def display(self):
+        print(self.name)
+        print(self.age)
+s1=Student()
+s1.data()
+s1.display()
+
+
+class Student:
+    def data(self,name,age):
+        self.name=name
+        self.age=age
+    def display(self):
+        print(self.name)
+        print(self.age)
+s1=Student()
+s1.data ('Sayali',18)
+
+class Student:
+    def __init(self,name,age):
+        self.name=name
+        self.age=age
+        print(self.name)
+        print(self.age)
+s1=Student('Sayali',18)
+
+
+class faculty:
+    def data(self):
+        self.name=input("Enter your name:")
+        self.age=int(input ("Enter your age:"))
+        self.salary=int(input("Enter your salary per year:"))
+    def display(self):
+        print(self.name)
+        print(self.age)
+        print(self.salary)
+        if self.salary>10000;
+           print("Good")
+         else:
+             print("Bad")
+    def greet(self):
+        print("Thank You for giving information",self.name)
+f1=faculty()
+f1.data()
+f1.display()
+f1.greet()
+
+
+
+class faculty:
+    def __init__(self,name,age,salary):
+        self.name=name
+        self.age=age
+        self.salary=salary
+    def display(self):
+        print(self.name)
+        print(self.age)
+        print(self.salary)
+        if self.salary>10000:
+            print("Good")
+        else:
+            print("Bad")
+    def greet(self):
+        print("Thank You for giving information",self.name)
+f1=faculty('mansi',45,100000)
+f1.display()
+f1.greet
