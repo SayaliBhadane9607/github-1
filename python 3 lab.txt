@@ -1,0 +1,36 @@
+#Import libraries
+
+import numpy as np
+import pandas as pd
+import seaborn as sns
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score, confusion_matrix,classification_report
+#load dataset
+iris = load_iris()
+X = iris.data
+Y = iris.target
+df=pd.DataFrame(x, columns=iris.feature_names)
+df['species']=iris.target
+print(df.head())
+print("Features Name : ",iris.feature_names)
+print("Target data : ",iris.target)
+print("Target Name : ",iris.target_names)
+#print("X------->",X)
+#split data
+X_train,X_test,Y_train,Y_test=train_test_split(X, Y, test_size=0.3,random_state=42)
+#create model
+model = LogisticRegression(max_iter=200)
+#Train model
+model.fit(X_train, Y_train)
+#Prediction
+Y_pred=model.predict(X_test)
+#confusion matrix
+cm=confusion_matrix(Y_test, Y_pred)
+#Evaluation
+print("Accuracy : ", accuracy_score(Y_test,Y_pred))
+print("\nConfusion Matrix : \n", confusion_matrix(Y_test, Y_pred))
+print("\nClassification Report : \n", classification_report(Y_test, Y_pred))
+print("Train Score : ", model.score(X_train, Y_train))
+print("Test Score : ", model.score(X_test, Y_test))
